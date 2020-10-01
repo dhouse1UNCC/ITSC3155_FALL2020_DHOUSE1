@@ -1,6 +1,6 @@
 
 import pythonBasics1
-# main() is already set up to call the functions 
+# main() is already set up to call the functions
 # we want to test with a few different inputs,
 # printing 'OK' when each function is correct.
 # the simple provided test() function used in main() to print
@@ -12,13 +12,13 @@ def test(got, expected):
     else:
         prefix = '  X '
     print ('%s got: %s expected: %s' % (prefix, repr(got), repr(expected)))
-  
+
 # Calls the functions in pythonBasics1 with interesting inputs.
 def main():
     # set which functions to test
     check_starts_with = True
-    check_starts_with_vowel = True
-    check_max_min_sum = True
+    check_starts_with_vowel = False
+    check_max_min_sum = False
 
     if check_starts_with:
         print('starts_with')
@@ -30,7 +30,7 @@ def main():
         test(pythonBasics1.starts_with('1',''), False)
         test(pythonBasics1.starts_with('',''), True)
         test(pythonBasics1.starts_with(' ',' '), True)
-    
+
     if check_starts_with_vowel:
         print()
         print('starts_with_vowel')
@@ -47,7 +47,7 @@ def main():
         test(pythonBasics1.starts_with_vowel('Unique'), True)
         test(pythonBasics1.starts_with_vowel(''), False)
 
-  
+
     if check_max_min_sum:
         print()
         print('max_min_sum')
