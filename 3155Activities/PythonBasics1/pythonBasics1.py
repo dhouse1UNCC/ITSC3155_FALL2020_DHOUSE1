@@ -24,8 +24,29 @@ def starts_with(s, char):
 # Your solution should work for both upper and lower cases
 def starts_with_vowel(s):
   # YOUR CODE HERE
-
-  return
+    if len(s) == 0:
+        return False
+    if s[0] == 'a':
+        return True
+    if s[0] == 'e':
+        return True
+    if s[0] == 'i':
+        return True
+    if s[0] == 'o':
+        return True
+    if s[0] == 'u':
+        return True
+    if s[0] == 'A':
+        return True
+    if s[0] == 'E':
+        return True
+    if s[0] == 'I':
+        return True
+    if s[0] == 'O':
+        return True
+    if s[0] == 'U':
+        return True
+    return False
 
 # Part C. max_min_sum
 # Define a function max_min_sum(arr) that takes an array and returns the sum
