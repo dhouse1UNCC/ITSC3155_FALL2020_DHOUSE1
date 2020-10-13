@@ -12,9 +12,10 @@ import re
 # if it starts with a number and false otherwise.
 # (For our purposes, a number is any character that is 0,1,2,3,4,5,6,7,8, or 9.)
 def starts_with_number(s):
-  # YOUR CODE HERE
-
-  return
+  x = re.findall("[0-9]", s)
+  if x:
+      return True
+  return False
 
 # # Part B. starts_with_consonant
 # Define a function starts_with_consonant(s) that takes a string and returns true
