@@ -23,9 +23,12 @@ def starts_with_number(s):
 # (For our purposes, a consonant is any letter other than A, E, I, O, U.)
 # Note: Be sure to use RegEx and it works for both upper and lower case and for nonletters!
 def starts_with_consonant(s):
-  # YOUR CODE HERE
-
-  return
+  if len(s) == 0:
+      return False
+  x = re.findall("\A[bcdfghjklmnpqrstvwxyzBCDFGHJKLMPQRSTVWXYZ]", s)
+  if x:
+      return True
+  return False
 
 
 # Part C. binary_multiple_of_4
