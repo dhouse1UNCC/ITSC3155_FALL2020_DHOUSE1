@@ -34,9 +34,15 @@ def starts_with_consonant(s):
 # Part C. binary_multiple_of_4
 # define a method binary_multiple_of_4(s) that takes a string and returns true
 # if the string represents a binary number that is a multiple of 4.
+def binary_multiple_of_4(s):
+    if len(s) == 0:
+        return False
+    a = re.findall("[^0-1]", s.strip())
+    if a:
+        return False
+    x = int(s.strip(),2)
+    if x % 4 != 0:
+        return False
+    return True
 # Note: Be sure it returns false if the string is not a valid binary number!
 # Hint: Use regular expressions to match for the pattern of a binary number that is a multiple of 4.
-def binary_multiple_of_4(s):
-  # YOUR CODE HERE
-
-  return

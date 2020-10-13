@@ -18,7 +18,7 @@ def main():
     # set which functions to test
     starts_with_number = True
     starts_with_consonant = True
-    binary_multiple_of_4 = False
+    binary_multiple_of_4 = True
 
     if starts_with_number:
         print('starts_with_number')
@@ -57,7 +57,7 @@ def main():
     if binary_multiple_of_4:
         print()
         print('binary_multiple_of_4')
-        testset1 = ["1010101010100", "0101010101010100", "100", "0"]
+        testset1 = ["1010101010100 ", "0101010101010100", "100", "0"]
 
         for case in testset1:
             test(pythonBasics3.binary_multiple_of_4(case),True)
