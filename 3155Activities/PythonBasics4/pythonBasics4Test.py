@@ -20,7 +20,7 @@ def main():
     # set which functions to test
     array_2_dict = True
     array2d_2_dict = True
-    dict_2_array = False
+    dict_2_array = True
 
     if array_2_dict:
         print('array_2_dict')

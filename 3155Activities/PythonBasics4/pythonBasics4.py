@@ -39,6 +39,19 @@ def array2d_2_dict(contact_info, contacts):
 # # Part C.
 def dict_2_array(contacts):
     # YOUR CODE HERE
-
-    return
+    n = len(contacts)
+    print(n)
+    if n == 0:
+        return [[], [], []]
+    a = [[0 for col in range(3)] for row in range(n)]
+    for i in range (0, n):
+        x = contacts.keys()
+        y = iter(x)
+        z = next(y)
+        c = contacts.get(z)
+        a[0][i]= c.get('email')
+        a[1][i]= c.get('phone')
+        a[2][i]= z
+        contacts.pop(z)
+    return a
 
