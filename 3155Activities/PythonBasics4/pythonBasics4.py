@@ -21,8 +21,20 @@ def array_2_dict(emails, contacts):
 # # Part B.
 def array2d_2_dict(contact_info, contacts):
     # YOUR CODE HERE
-
-    return
+    newContacts = {}
+    internalC = {}
+    if(len(contact_info) < 2):
+        return contacts
+    for n in range (0, len(contact_info)):
+        x = contacts.keys()
+        y = iter(x)
+        z = next(y)
+        contacts.pop(z)
+        internalC['email'] = contact_info[n][0]
+        internalC['phone'] = contact_info[n][1]
+        newContacts[z] = internalC
+        internalC = {}
+    return newContacts
 
 # # Part C.
 def dict_2_array(contacts):
