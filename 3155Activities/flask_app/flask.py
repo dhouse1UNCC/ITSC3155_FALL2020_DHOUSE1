@@ -10,5 +10,5 @@ app = Flask(__name__)     # create an app
 # get called. What it returns is what is shown as the web page
 @app.route('/')
 def index():
-    return 'Hello World!'
+    return 'Welcome, Notes App User!'
 
