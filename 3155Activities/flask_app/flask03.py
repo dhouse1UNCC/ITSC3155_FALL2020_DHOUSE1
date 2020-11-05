@@ -2,6 +2,7 @@
 
 # imports
 from flask import Flask   # Flask is the web app that we will customize
+from flask import request
 from flask import render_template
 app = Flask(__name__)     # create an app
 app.config["DEBUG"] = True
@@ -33,7 +34,11 @@ def get_note(note_id):
             }
     return render_template('note.html', note=notes[int(note_id)], user=a_user)
 
-@app.route('/notes/new')
+@app.route('/notes/new', methods=['GET', 'POST'])
 def new_note():
     a_user = {'name': 'Daniel House', 'email':'mogli@uncc.edu'}
-    return render_template('new.html', user = a_user)
+    print('request method is ',request.method)
+    if request.method == 'POST' :
+        return '<h1> POST method used for this request </h1>'
+    else:
+        return render_template('new.html', user = a_user)
