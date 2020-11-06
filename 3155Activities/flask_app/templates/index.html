@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
     <nav>
         <a href="{{url_for('index')}}" > Home </a> ||
-        <a href="{{url_for('get_notes')}}" > My Notes </a>
+        <a href="{{url_for('get_notes')}}" > My Notes </a> ||
+        <a href="{{url_for('new_note')}}" > Add Notes </a>
     </nav>
     <head>
         <meta charset="utf-8">
@@ -17,13 +18,5 @@
         <h1>Welcome {{ user.name }} to the 49er Notes App!</h1>
 
         <h2>Use this site to maintain and organize your notes.</h2>
-
-        <h3>Course notes</h3>
-
-        <h3>To Do</h3>
-
-        <h3>Work notes</h3>
-
-        <nav> <a href="/notes"> My notes </a> </nav>
     </body>
 </html>
