@@ -6,10 +6,20 @@ from flask import request
 from flask import render_template
 from flask import redirect, url_for
 from datetime import date
+from database import db
 
 app = Flask(__name__)     # create an app
 app.config["DEBUG"] = True
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///flask_note_app.db'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS']= False
+#  Bind SQLAlchemy db object to this Flask app
+db.init_app(app)
 
+# Setup models
+with app.app_context():
+    db.create_all()   # run under the app context
+
+#notes
 notes = { 1 : { 'title': 'First note', 'text' : 'This is my first note', 'date': '10-1-2020'},
         2: { 'title': 'Second note', 'text' : 'This is my second note', 'date': '10-2-2020'},
         3 : { 'title': 'Third note' , 'text' : 'This is my third note', 'date' : '10-3-2020'}
